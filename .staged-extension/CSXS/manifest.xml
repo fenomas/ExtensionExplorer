@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExtensionManifest Version="4.0" ExtensionBundleId="com.aphall.ExtensionExplorer" ExtensionBundleVersion="1.0.0"
+		ExtensionBundleName="ExtensionExplorer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ExtensionList>
+		<Extension Id="com.aphall.ExtensionExplorer.extension1" Version="1.0" />
+	</ExtensionList>
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="ILST" Version="[17.0,17.9]" />
+			<Host Name="PHXS" Version="[14.0,14.9]" />
+			<Host Name="PHSP" Version="[14.0,14.9]" />
+			<Host Name="PRLD" Version="[2.0,2.9]" />
+			<Host Name="PPRO" Version="[7.0,7.9]" />
+		</HostList>
+		<LocaleList>
+			<Locale Code="All" />
+		</LocaleList>
+		<RequiredRuntimeList>
+			<RequiredRuntime Name="CSXS" Version="4.0" />
+
+		</RequiredRuntimeList>
+	</ExecutionEnvironment>
+	<DispatchInfoList>
+		<Extension Id="com.aphall.ExtensionExplorer.extension1">
+			<DispatchInfo >
+				<Resources>
+				<MainPath>./index.html</MainPath>
+				</Resources>
+				<Lifecycle>
+					<AutoVisible>true</AutoVisible>
+				</Lifecycle>
+				<UI>
+					<Type>Panel</Type>
+					<Menu>ExtensionExplorer</Menu>
+					<Geometry>
+						<Size>
+							<Height>400</Height>
+							<Width>500</Width>
+						</Size>
+						<MinSize>
+							<Height>200</Height>
+							<Width>400</Width>
+						</MinSize>
+					</Geometry>
+				</UI>
+			</DispatchInfo>
+		</Extension>
+	</DispatchInfoList>
+</ExtensionManifest>

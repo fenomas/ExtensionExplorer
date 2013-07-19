@@ -1,0 +1,12 @@
+
+<div class="search-bar">
+    <input type="search" placeholder="search" 
+        class="topcoat-search-input search-key" ng-model="query">
+</div>
+<div class="topcoat-list__container" id="nav-list">
+    <ul class="topcoat-list" ng-repeat="section in sections | filter:query">
+        <a href ng-click="navTo(section);">
+            <li class="topcoat-list__item">{{section}}</li>
+        </a>
+    </ul>
+</div>

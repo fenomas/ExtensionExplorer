@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app ng-controller="pageCtrl">
+<head>
+    <title>Extension Explorer</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" ng-href="{{topcoatCSS}}">
+	<link rel="stylesheet" href="{{mainCSS}}">
+    <script src="lib/angular.js"></script>
+ 	<script src="lib/CSInterface-4.0.0.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages.js"></script>
+</head>
+<body onLoad="onBodyLoaded()">
+	
+    <div>
+        <div ng-include src="headerURL" id="header-container"></div>
+        <div ng-include src="navURL" id="nav-container"></div>
+        <div ng-include src="bodyURL" id="body-container"></div>
+    </div>
+    
+</body>
+</html>
