@@ -10,12 +10,12 @@ function pageCtrl($scope) {
     $scope.dat = {}; // misc use
     
     $scope.sections = [
-        "colorPicker",
-        "PlaceHolder",
-        "HostEnvironment",
-        "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", 
-        "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", 
-        "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", 
+		"RunScript",
+		"colorPicker",
+		"HostEnvironment",
+		"PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", 
+		"PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", 
+		"PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", "PlaceHolder", 
     ];
     
     $scope.navTo = function (section) {

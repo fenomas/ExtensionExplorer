@@ -1,0 +1,18 @@
+<h1>RunScript</h1>
+
+
+<p>Enter a script below and run it.</p>
+
+<div ng-controller="runScriptCtrl">
+	
+	<textarea class="topcoat-textarea" rows="5" cols="45" placeholder="Script" ng-model="scriptText"></textarea>
+	<br><br>
+    <a class="topcoat-button--cta" href ng-click="run()">Run the Script</a>
+    
+    <br><br>
+    <div ng-show="showOutput">
+	    Output: <br>
+	    <textarea disabled="true" class="topcoat-textarea" rows="2" cols="45" placeholder="Output" ng-model="scriptOutput"></textarea>
+	</div>
+
+</div>

@@ -24,4 +24,26 @@ function colorPickerCtrl($scope) {
 }
 
 
+function runScriptCtrl($scope) {
+    
+	$scope.scriptText = "$.colorPicker(-1);";
+	$scope.scriptOutput = "";
+	$scope.showOutput = false;
+    
+    $scope.run = function() {
+        try {
+	        new CSInterface().evalScript( $scope.scriptText, function(e) {
+	        	if (e) {
+	        		$scope.scriptOutput = e.toString();
+	        	}
+	        } );
+        } catch(e) {
+        	$scope.scriptOutput = e.toString();
+        }
+        $scope.showOutput = ($scope.scriptOutput);
+    };
+    
+}
+
+
 
