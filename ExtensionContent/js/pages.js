@@ -46,4 +46,25 @@ function runScriptCtrl($scope) {
 }
 
 
+function AppSkinCtrl($scope) {
+    
+	var inCCTool = (window.__adobe_cep__) ? true : false;
+	
+	$scope.showWarning = !inCCTool;
+	
+	$scope.apis = [ "baseFontFamily", "baseFontSize", "appBarBackgroundColor", "panelBackgroundColor", 
+	                "appBarBackgroundColorSRGB", "panelBackgroundColorSRGB", "systemHighlightColor" ];
+	$scope.values = {};
+	
+	if (inCCTool) {
+		var skinInfo = JSON.parse(window.__adobe_cep__.getHostEnvironment()).appSkinInfo;
+		for (var s in $scope.apis) {
+			var api = $scope.apis[s];
+			$scope.values[api] = skinInfo[api];
+		}
+	}
+	
+}
+
+
 

@@ -1,0 +1,22 @@
+<h2>AppSkinInfo</h2>
+
+<div ng-controller="AppSkinCtrl">
+	<p>API description</p>
+	
+	<div id="nav-list">
+	
+		<div ng-show="showWarning">To see current values of each API, view this in a CC tool.</div>
+		<br>
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Current Value</th>
+			</tr>
+			<tr ng-repeat="api in apis">
+				<td>{{api}}</td>
+				<td>{{values[api]}}</td>
+			</tr>
+		</table>
+
+	</div>
+</div>

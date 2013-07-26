@@ -10,6 +10,7 @@ function pageCtrl($scope) {
     $scope.dat = {}; // misc use
     
     $scope.sections = [
+		"AppSkinInfo",
 		"RunScript",
 		"colorPicker",
 		"HostEnvironment",
@@ -33,10 +34,14 @@ function pageCtrl($scope) {
 
 // set up some extension management when main body loads
 function onBodyLoaded() {
-	new CSInterface().addEventListener(CSInterface.THEME_COLOR_CHANGED_EVENT, function(event) {
+	if (window.__adobe_cep__) {
+		new CSInterface().addEventListener(CSInterface.THEME_COLOR_CHANGED_EVENT, function(event) {
+			setCSSbyThemeColor();
+		});
 		setCSSbyThemeColor();
-	});
-	setCSSbyThemeColor();
+	} else {
+		// this is reached if we're not inside a CC tool container
+	}
 }
 
 
